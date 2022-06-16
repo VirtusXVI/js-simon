@@ -6,11 +6,8 @@
 const numbers = generateNumbers(5, 1, 10);
 // alert che mostra i 5 numeri casuali chiamando la funzione
 alert(numbers);
-// funzione timeout di 30 secondi
-let clock = setTimeout(gameEnd, 3000);
-// dopo 30 secondi il prompt si chiude e viene visualizzato un messaggio che mostra quanti numeri sono stati indovinati,quali numeri sono stati indovinati e l'array originale che contiene tutti i numeri
-
-
+// funzione timeout di 30 secondi (NB:CAMBIARE DURATA A 30 SECONDI)
+let clock = setTimeout(gameEnd, 30000);
 
 // funzione che verrà eseguita durante i 30 secondi
 function game(numbers){
@@ -30,7 +27,7 @@ function gameEnd() {
     alert(`Complimenti hai indovinato${guessedNumbers.length} numeri su 5, i numeri generati erano:${numbers}`);
 }
 
-// funzione che genera 5 numeri casuali,non duplicati e li inserisce nell'array
+// funzioni che generano 5 numeri casuali,non duplicati e li inserisce nell'array
 function generateNumbers(n, min, max){
     let generatedNumbers = [];
     while(generatedNumbers.length < n){
